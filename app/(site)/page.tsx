@@ -21,16 +21,14 @@ export default function HomePage() {
         </div>
         <div className="mx-auto max-w-screen-2xl">
           <div className="max-w-4xl">
-            <span className="mb-6 block text-xs font-bold uppercase tracking-[0.4em] text-raka-primaryContainer">
-              RAKA Marketing
-            </span>
             <h1 className="mb-8 font-display text-5xl font-extrabold uppercase leading-[1.1] tracking-tighter text-white md:text-7xl lg:text-8xl">
               Turn online visibility into{" "}
               <span className="text-raka-primaryContainer">stronger response.</span>
             </h1>
             <p className="mb-12 max-w-2xl text-xl font-light leading-relaxed text-neutral-400 md:text-2xl">
-              Clear messaging helps customers and audiences understand,
-              connect, and take action.
+              Raka Marketing focuses on communication clarity, structure, and
+              response — helping brands and creators make their message easier
+              to understand, connect with, and act on.
             </p>
             <div className="flex flex-wrap items-center gap-6">
               <Link href={BRAND_REVIEW_HREF} className="cta-btn">
@@ -141,10 +139,9 @@ export default function HomePage() {
                 being understood.
               </p>
               <p>
-                <strong className="text-white">RAKA Marketing</strong> focuses
-                on communication clarity, structure, and response — helping
-                brands and creators make their message easier to understand,
-                connect with, and act on.
+                Raka Marketing focuses on communication clarity, structure, and
+                response — helping brands and creators make their message easier
+                to understand, connect with, and act on.
               </p>
             </div>
 
