@@ -111,7 +111,7 @@ export function SiteHeader() {
           </div>
 
           <nav
-            className="flex shrink-0 flex-nowrap items-center justify-center gap-x-2.5 px-1 text-xs font-medium uppercase leading-tight tracking-[0.14em] text-neutral-400 xl:gap-x-5 xl:text-sm xl:tracking-widest 2xl:gap-x-8"
+            className="flex shrink-0 flex-nowrap items-center justify-center gap-x-1.5 text-[10px] font-medium uppercase leading-tight tracking-[0.08em] text-neutral-400 lg:gap-x-2 xl:gap-x-5 xl:text-xs xl:tracking-[0.14em] 2xl:gap-x-8 2xl:text-sm 2xl:tracking-widest"
             aria-label="Primary"
           >
             {navItems.map((item) => {
