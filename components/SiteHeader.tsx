@@ -93,7 +93,9 @@ export function SiteHeader() {
     <header className="glass-nav fixed top-0 z-50 w-full">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 py-4 sm:px-6 lg:px-10 lg:py-5 xl:px-12">
         {/* Desktop: full nav from lg so tablets avoid a cramped single row */}
-        <div className="hidden w-full min-w-0 grid-cols-3 items-center gap-3 lg:grid xl:gap-6">
+        {/* 1fr / auto / 1fr: nav column is only as wide as its links — avoids crushing
+            the center column (which grid-cols-3 did) and removes need for flex-wrap. */}
+        <div className="hidden w-full min-w-0 grid-cols-[1fr_auto_1fr] items-center gap-3 lg:grid xl:gap-6">
           <div className="flex min-w-0 justify-start">
             <Link
               href="/#home"
@@ -109,7 +111,7 @@ export function SiteHeader() {
           </div>
 
           <nav
-            className="flex min-w-0 flex-wrap justify-center gap-x-2.5 px-1 text-xs font-medium uppercase leading-tight tracking-[0.14em] text-neutral-400 xl:gap-x-5 xl:text-sm xl:tracking-widest 2xl:gap-x-8"
+            className="flex shrink-0 flex-nowrap items-center justify-center gap-x-2.5 px-1 text-xs font-medium uppercase leading-tight tracking-[0.14em] text-neutral-400 xl:gap-x-5 xl:text-sm xl:tracking-widest 2xl:gap-x-8"
             aria-label="Primary"
           >
             {navItems.map((item) => {
