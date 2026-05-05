@@ -9,7 +9,7 @@ import { BRAND_REVIEW_HREF, CREATOR_REVIEW_HREF } from "@/lib/site";
 const navItems = [
   { href: "/#home", label: "Home", id: "home" },
   { href: "/#services", label: "Services", id: "services" },
-  { href: "/#about", label: "Beyond Visibility", id: "about" },
+  { href: "/#about", label: "About", id: "about" },
   { href: "/#faqs", label: "FAQs", id: "faqs" },
   { href: "/#contact", label: "Contact", id: "contact" },
   { href: BRAND_REVIEW_HREF, label: "Brands", id: "brands", standalone: true },

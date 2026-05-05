@@ -106,7 +106,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Beyond Visibility */}
+      {/* About */}
       <section
         id="about"
         className="scroll-mt-24 bg-raka-bg px-8 py-24 md:px-12 md:py-32"
@@ -124,7 +124,7 @@ export default function HomePage() {
           </div>
           <div className="lg:col-span-7">
             <span className="mb-4 block text-xs font-bold uppercase tracking-[0.4em] text-raka-primaryContainer">
-              Beyond Visibility
+              About
             </span>
             <h2 className="mb-6 font-display text-4xl font-extrabold leading-none text-white md:text-7xl">
               RAKA Marketing
