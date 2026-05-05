@@ -31,14 +31,14 @@ The local site runs at `http://localhost:3000`.
 
 ## Main Routes
 
-- `/` — Home page with hero (HL: "Turn online visibility into stronger response.", SH: "Clear messaging helps customers and audiences understand, connect, and take action."), services, Beyond Visibility / RAKA Marketing section, FAQs, and contact sections.
+- `/` — Home page with hero (HL: "Turn online visibility into stronger response.", SH: "Clear messaging helps customers and audiences understand, connect, and take action."), **Services** (overview + **Communication Review & Strategy** card with focus areas), Beyond Visibility / RAKA Marketing section, FAQs, and contact (Sydney with map pin).
 - `/brands` — Brand review request flow with a multi-step intake form (`/request-brand-review` → 301 redirects here).
 - `/creators` — Creator review request flow with a multi-step intake form (`/request-creator-review` → 301 redirects here).
 - `/privacy` — Privacy policy.
 - `/terms` — Terms of use.
 - `/disclaimer` — Disclaimer.
 
-The main navigation is defined in `components/SiteHeader.tsx`. The home page sections are inline in `app/(site)/page.tsx`.
+The main navigation is defined in `components/SiteHeader.tsx` (no separate top-right CTA on desktop — Brands and Creators remain in the nav). The home page sections are inline in `app/(site)/page.tsx`.
 
 ## Key Configuration
 
@@ -54,8 +54,8 @@ Site-wide links and business constants live in `lib/site.ts`:
 
 There is no backend database. Brand and creator review request forms are saved to Google Sheets through the server-side App Router route handler at `app/api/form-submissions/route.ts`.
 
-- `components/BrandReviewWizard.tsx` collects brand review answers client-side, posts them to `/api/form-submissions` with `formType: "Brand Review request"`, and shows the auto-reply after the Google Sheets append succeeds.
-- `components/CreatorReviewWizard.tsx` collects creator review answers client-side, posts them to `/api/form-submissions` with `formType: "Creator Review request"`, and shows the auto-reply after the Google Sheets append succeeds.
+- `components/BrandReviewWizard.tsx` collects brand review answers client-side, posts them to `/api/form-submissions` with `formType: "Brand Review request"`, and shows the on-screen confirmation after the Google Sheets append succeeds.
+- `components/CreatorReviewWizard.tsx` collects creator review answers client-side, posts them to `/api/form-submissions` with `formType: "Creator Review request"`, and shows the on-screen confirmation (after the Google Sheets append succeeds). The **Role or creator type** step was removed; the Google Sheet still includes a "Role / Creator Type" column (left empty for new rows).
 - `components/CookieConsentBanner.tsx` stores cookie consent in the browser.
 
 The API route writes brand submissions to a `Brand Review Requests` tab and creator submissions to a `Creator Review Requests` tab. Missing tabs are auto-created. Headers are auto-synced. Each tab has its own column ordering, defined in `BRAND_HEADERS` / `CREATOR_HEADERS` in `app/api/form-submissions/route.ts`.

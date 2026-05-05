@@ -387,8 +387,12 @@ export function BrandReviewWizard() {
         </h2>
         <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
           <p>
-            Your submission has been received and will be reviewed shortly.
-            Further details and next steps will be shared via email.
+            Your answers were saved successfully. This page is your automatic
+            confirmation that we received your request.
+          </p>
+          <p>
+            We&apos;ll follow up at the email you provided with next steps and
+            timing.
           </p>
         </div>
       </div>

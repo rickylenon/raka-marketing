@@ -3,13 +3,6 @@
 import { useCallback, useMemo, useState } from "react";
 import { CONTACT_EMAIL } from "@/lib/site";
 
-const roleTypeOptions = [
-  "Vlogger",
-  "Coach",
-  "Digital product seller",
-  "Other",
-] as const;
-
 const creatorDescriptionOptions = [
   "Content Creator",
   "Vlogger",
@@ -45,7 +38,6 @@ const supportInterestOptions = [
 type CreatorReviewRequest = {
   name: string;
   brand: string;
-  roleType: string;
   email: string;
   phone: string;
   links: string;
@@ -58,7 +50,6 @@ type CreatorReviewRequest = {
 const emptyRequest: CreatorReviewRequest = {
   name: "",
   brand: "",
-  roleType: "",
   email: "",
   phone: "",
   links: "",
@@ -162,31 +153,6 @@ export function CreatorReviewWizard() {
             placeholder="Channel, handle, or personal brand"
             required
           />
-        ),
-      },
-      {
-        label: "Role or creator type",
-        helper: "Choose the closest match.",
-        isComplete: request.roleType.trim().length > 0,
-        field: (
-          <select
-            value={request.roleType}
-            onChange={(e) =>
-              setRequest((current) => ({
-                ...current,
-                roleType: e.target.value,
-              }))
-            }
-            className={inputClass}
-            required
-          >
-            <option value="">Select one</option>
-            {roleTypeOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
         ),
       },
       {
@@ -331,7 +297,6 @@ export function CreatorReviewWizard() {
     console.log("[CreatorReviewWizard] submitting creator review request", {
       recipient: CONTACT_EMAIL,
       email: request.email,
-      roleType: request.roleType,
       creatorDescription: request.creatorDescription,
       reviewAreas: request.reviewAreas,
       challenges: request.challenges,
@@ -347,7 +312,6 @@ export function CreatorReviewWizard() {
           fields: {
             name: request.name,
             brand: request.brand,
-            roleType: request.roleType,
             email: request.email,
             contactNumber: request.phone,
             links: request.links,
@@ -408,8 +372,12 @@ export function CreatorReviewWizard() {
         </h2>
         <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
           <p>
-            Your submission has been received and will be reviewed shortly.
-            Further details and next steps will be shared via email.
+            Your answers were saved successfully. This page is your automatic
+            confirmation that we received your request.
+          </p>
+          <p>
+            We&apos;ll follow up at the email you provided with next steps and
+            timing.
           </p>
         </div>
       </div>

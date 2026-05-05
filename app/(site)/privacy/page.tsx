@@ -66,7 +66,7 @@ export default function PrivacyPage() {
         <ul className="mt-3 list-disc space-y-2 pl-5">
           <li>
             <strong className="text-raka-onSurface">Identity and contact:</strong>{" "}
-            name, brand or company name, role, email address, phone number,
+            name, brand or company name, job role (brand review form), email address, phone number,
             country or time zone, and similar details you provide via the brand
             or creator review request forms.
           </li>

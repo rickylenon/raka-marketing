@@ -47,20 +47,20 @@ export default function HomePage() {
       {/* Services */}
       <section
         id="services"
-        className="scroll-mt-24 border-t border-white/5 bg-raka-surfaceLowest px-8 py-24 md:px-12 md:py-32"
+        className="scroll-mt-24 border-t border-white/5 bg-raka-surfaceLowest px-8 py-28 md:px-12 md:py-36"
       >
         <div className="mx-auto max-w-screen-2xl">
-          <div className="mb-20 flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
+          <div className="mb-20 flex flex-col items-start justify-between gap-12 md:flex-row md:items-end">
             <div className="max-w-2xl">
-              <span className="mb-4 block text-xs font-bold uppercase tracking-[0.4em] text-raka-primaryContainer">
+              <span className="mb-4 block text-sm font-bold uppercase tracking-[0.4em] text-raka-primaryContainer md:text-base">
                 Our expertise
               </span>
-              <h2 className="font-display text-5xl font-extrabold uppercase leading-none tracking-tighter text-white md:text-8xl">
+              <h2 className="font-display text-6xl font-extrabold uppercase leading-none tracking-tighter text-white md:text-8xl lg:text-9xl">
                 Services
               </h2>
             </div>
-            <div className="max-w-xl">
-              <p className="text-xl leading-relaxed text-neutral-300 md:text-2xl">
+            <div className="max-w-2xl">
+              <p className="text-2xl leading-relaxed text-neutral-300 md:text-3xl">
                 Focused reviews and strategic guidance designed to improve how
                 brands and creators communicate, connect, and encourage response
                 online.
@@ -68,24 +68,18 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mb-16 border border-white/5 bg-raka-surfaceContainer p-10 md:p-16">
-            <div className="mb-8">
+          <div className="mb-16 border border-white/5 bg-raka-surfaceContainer p-10 md:p-20">
+            <div className="mb-10">
               <Icon name="hub" className="raka-ms-icon raka-ms-icon--accent" />
             </div>
-            <h3 className="mb-6 max-w-5xl font-display text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-5xl">
-              Focused reviews and strategic guidance designed to improve how
-              brands and creators communicate, connect, and encourage response
-              online.
+            <h3 className="mb-14 max-w-5xl font-display text-4xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
+              Communication Review &amp; Strategy
             </h3>
-            <p className="mb-12 max-w-3xl text-xl leading-relaxed text-neutral-400">
-              The review looks at the parts of your communication that may be
-              causing missed response opportunities.
-            </p>
 
-            <h4 className="mb-8 text-sm font-bold uppercase tracking-[0.3em] text-raka-primaryContainer md:text-base">
+            <h4 className="mb-10 text-base font-bold uppercase tracking-[0.3em] text-raka-primaryContainer md:text-lg">
               Focus areas
             </h4>
-            <ul className="grid grid-cols-1 gap-x-12 gap-y-5 text-base text-neutral-200 sm:grid-cols-2 md:text-lg lg:grid-cols-3">
+            <ul className="grid grid-cols-1 gap-x-12 gap-y-6 text-lg text-neutral-200 sm:grid-cols-2 md:text-xl lg:grid-cols-3">
               {[
                 "Messaging clarity",
                 "Online presence",
