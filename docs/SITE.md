@@ -31,7 +31,7 @@ The local site runs at `http://localhost:3000`.
 
 ## Main Routes
 
-- `/` — Home page with hero (HL: "Turn online visibility into stronger response.", SH: "Clear messaging helps customers and audiences understand, connect, and take action."), audience split (Brands / Creators), services, Beyond Visibility / RAKA Marketing section, FAQs, and contact sections.
+- `/` — Home page with hero (HL: "Turn online visibility into stronger response.", SH: "Clear messaging helps customers and audiences understand, connect, and take action."), services, Beyond Visibility / RAKA Marketing section, FAQs, and contact sections.
 - `/brands` — Brand review request flow with a multi-step intake form (`/request-brand-review` → 301 redirects here).
 - `/creators` — Creator review request flow with a multi-step intake form (`/request-creator-review` → 301 redirects here).
 - `/privacy` — Privacy policy.

@@ -12,6 +12,7 @@ export type IconName =
   | "hub"
   | "insights"
   | "lightbulb"
+  | "location_on"
   | "magnification_small"
   | "psychology"
   | "rocket_launch"
